@@ -15,10 +15,10 @@ Before running the application, ensure that you have the following dependencies 
 To build the Docker container image and run the application locally, follow these steps:
 
 1. Clone the repository.
-2. Build a Docker container image and run the application inside a container;
-docker build -t your-image-name .
+2. Build a Docker container image and run the application inside a container:
+   docker build -t your-image-name .
 3. Run the Docker container using the built image:
-docker run -d -p 5000:5000 your-image-name
+  docker run -d -p 5000:5000 your-image-name
 The application will be accessible at http://localhost:5000.
 
 Continuous Integration
