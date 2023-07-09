@@ -1,4 +1,3 @@
-# docker-ci
 # Hello World Flask Application
 
 This project contains a simple Hello World Flask application implemented in Python. The application provides an endpoint that returns a greeting message.
@@ -19,9 +18,10 @@ To build the Docker container image and run the application locally, follow thes
    docker build -t your-image-name .
 3. Run the Docker container using the built image:
   docker run -d -p 5000:5000 your-image-name
+
 The application will be accessible at http://localhost:5000.
 
-Continuous Integration
+## Continuous Integration
 This project is set up with continuous integration using GitHub Workflows. The workflow configuration can be found in the .github/workflows directory.
 
 The workflow is triggered on push events to the main branch and also runs periodically on Saturdays at 7 PM. It builds the container image and pushes it to the Docker Hub registry with the latest tag.
