@@ -1,8 +1,8 @@
 name: CI
+
 on:
-  push:
   schedule:
-    - cron: "25 17 * * 0" 
+    - cron: "35 17 * * 0"
 
 jobs:
   build-and-push-image:
@@ -24,9 +24,8 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-    - name: Build and push Docker image
-      uses: docker/build-push-action@v2
-      with:
-        context: .
-        push: true
-        tags: mtahatavaci/hello-world-pflask:0.2.1.RELEASE
+    - name: Build Docker image
+      run: docker build -t mtahatavaci/hello-world-pflask:0.2.1.RELEASE .
+
+    - name: Push Docker image
+      run: docker push mtahatavaci/hello-world-pflask:0.2.1.RELEASE
