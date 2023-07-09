@@ -1,7 +1,7 @@
 name: CI
 on:
   schedule:
-    - cron: "06 17 * * 0" # Run every Saturday at 7 PM UTC
+    - cron: "05 17 * * 0" # Run every Saturday at 7 PM UTC
 
 jobs:
   build-and-push-image:
