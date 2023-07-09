@@ -15,9 +15,9 @@ To build the Docker container image and run the application locally, follow thes
 
 1. Clone the repository.
 2. Build a Docker container image and run the application inside a container:
-   "docker build -t your-image-name ."
+   - docker build -t your-image-name .
 3. Run the Docker container using the built image:
-  "docker run -d -p 5000:5000 your-image-name"
+   - docker run -d -p 5000:5000 your-image-name
 
 The application will be accessible at http://localhost:5000.
 
