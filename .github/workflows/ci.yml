@@ -4,7 +4,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: "52 17 * * 0" # Run every Saturday at 7 PM UTC
+    - cron: "55 17 * * 0" # Run every Saturday at 7 PM UTC
 jobs:
   build-and-push-image:
     runs-on: ubuntu-latest
@@ -25,4 +25,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: mtahatavaci/hello-world-pflask:0.0.1.RELEASE
+        tags: mtahatavaci/hello-world-pflask:0.1.1.RELEASE
