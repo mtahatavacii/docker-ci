@@ -23,4 +23,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: mtahatavaci/hello-world-pflask:0.0.1.RELEASE
+        tags: mtahatavaci/hello-world-pflask:0.0.2.RELEASE
