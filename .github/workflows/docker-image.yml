@@ -24,7 +24,11 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build Docker image
-        run: docker build -t mtahatavaci/hello-world-pflask:latest -t mtahatavaci/hello-world-pflask:${{ github.run_number }} .
+        run: |
+          docker build -t mtahatavaci/hello-world-pflask:${{ github.run_number }} .
+          docker tag mtahatavaci/hello-world-pflask:${{ github.run_number }} mtahatavaci/hello-world-pflask:latest
 
       - name: Push Docker image
-        run: docker push mtahatavaci/hello-world-pflask:latest && docker push mtahatavaci/hello-world-pflask:${{ github.run_number }}
+        run: |
+          docker push mtahatavaci/hello-world-pflask:${{ github.run_number }}
+          docker push mtahatavaci/hello-world-pflask:latest
